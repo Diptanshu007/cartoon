@@ -9,12 +9,9 @@ const AppProvider = ({ children }) => {
   const [allData, setAllData] = useState(false);
   const [genresData, setGenresData] = useState();
   const [filterGenres, seFilterGenres] = useState();
-  console.log(filterGenres, "filterGenres");
   const [finalNum, setFinalNum] = useState(1015);
   const [cartoonData, setCartoonData] = useState([]);
-  console.log(cartoonData, "cartoonData");
   const [query, setQuery] = useState("");
-  console.log(query, "query");
   const [isError, setIsError] = useState({
     show: false,
     errMsg: "",
@@ -27,13 +24,9 @@ const AppProvider = ({ children }) => {
           dataArr.push(ele);
         }
         setCartoonData(dataArr);
-        // if(data == "") {
-        //   getApiData(API_URL)
-        // }
       });
   };
 
-  console.log(cartoonData, "data1------");
   const getApiData = async (url) => {
     try {
       let res = await fetch(url);
@@ -61,7 +54,6 @@ const AppProvider = ({ children }) => {
     cartoonData &&
       cartoonData.map((ele) => {
         ele.genres.map((item) => {
-          console.log(item.name, "genresData123");
           dataArr.push(item.name);
         });
         setGenresData([...new Set(dataArr)]);

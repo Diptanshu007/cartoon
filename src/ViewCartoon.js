@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { useParams } from "react-router";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ReactLoading from "react-loading";
 
 const ViewCartoon = () => {
@@ -20,7 +20,6 @@ const ViewCartoon = () => {
       } else {
         console.log(res.error);
       }
-      console.log(res, "response");
     } catch (error) {
       console.log(console.error);
     }

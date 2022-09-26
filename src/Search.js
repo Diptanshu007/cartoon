@@ -3,8 +3,8 @@ import "./App.css";
 import { AppContext } from "./context";
 
 const Search = () => {
-  const { query, setQuery, isError, searchData } = useContext(AppContext);
-  console.log(query, "query");
+  const { query, setQuery, isError } = useContext(AppContext);
+
   return (
     <section className="search-section">
       <h2>Search Your Favourite Anime</h2>
@@ -16,7 +16,6 @@ const Search = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          {/*<i className="fa-solid fa-magnifying-glass search" onClick={(e)=>searchData(query)}></i> */}
         </div>
       </form>
       <div className="card-error">
