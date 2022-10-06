@@ -3,8 +3,7 @@ import "./App.css";
 import { AppContext } from "./context";
 
 export default function Pagination() {
-  const { finalNum, num, setNum } = useContext(AppContext);
-
+  const { finalNum, num, setNum } = useContext(AppContext)
   const getPrevData = () => {
     if (num > 1) {
       setNum(num - 1);
