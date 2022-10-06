@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import ReactLoading from "react-loading";
 import { NavLink } from "react-router-dom";
@@ -12,10 +12,7 @@ const Cartoon = () => {
     isLoading,
     setAllData,
     query,
-    setQuery,
-    genresData,
-    seFilterGenres,
-    filterGenres,
+    genresData
   } = useContext(AppContext);
   const filterGenresData = (genres) => {
     let filteRes = [];

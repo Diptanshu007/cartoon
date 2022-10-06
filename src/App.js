@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cartoon from "./Cartoon";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";
 import ViewCartoon from "./ViewCartoon";
